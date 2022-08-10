@@ -15,7 +15,7 @@ public class Partner {
     public void setId(Long id) {
         this.id = id;
     }
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -28,9 +28,6 @@ public class Partner {
     Partner(){}
 
 
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;

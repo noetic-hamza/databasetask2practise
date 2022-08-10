@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -19,7 +20,7 @@ public class ControllerPartner {
 
 
     List<PartnerDTO> table = new ArrayList<PartnerDTO>();
-
+    List<PartnerDTO> table1 = new ArrayList<PartnerDTO>();
 
     //    @GetMapping("/all")
 //    public List<Partner> getAll(){
@@ -60,6 +61,7 @@ public class ControllerPartner {
     @RequestMapping(value = "/findall", method = RequestMethod.GET)
     public void find_partner() {
         services.findAllpartner();
+
     }
 
         @RequestMapping(value = "/findbyid" , method = RequestMethod.GET)
@@ -73,7 +75,12 @@ public class ControllerPartner {
                 partnerDTO.setName(list2.get(i).getname());
                 table.add(partnerDTO);
             }
-        System.out.println(table);
+//        System.out.println(count);
+//            for (long j =0 ; j<=count ; j++ ){
+//                partnerRepository.findAllById(Collections.singleton(j));
+//                table1.add(partnerDTO);
+//            }
+//
         return partnerRepository.partnerById(3L);
     }
 //    @RequestMapping(value = "/retyCount", method = RequestMethod.GET)
