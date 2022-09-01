@@ -67,7 +67,9 @@ public class ControllerPartner {
     @RequestMapping(value = "/testing", method = RequestMethod.POST)
     public String hello() throws InterruptedException {
 
-        TimeUnit.SECONDS.sleep(60);
+//        TimeUnit.SECONDS.sleep(60);
+        System.out.println("In API thread called");
+        Thread.sleep(10000);
 
         System.out.println("1");
         System.out.println("2");
