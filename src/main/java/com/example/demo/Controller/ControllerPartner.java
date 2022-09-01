@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 public class ControllerPartner {
@@ -61,6 +62,25 @@ public class ControllerPartner {
     @RequestMapping(value = "/findall", method = RequestMethod.GET)
     public void find_partner() {
         services.findAllpartner();
+
+    }
+    @RequestMapping(value = "/testing", method = RequestMethod.POST)
+    public String hello() throws InterruptedException {
+
+        TimeUnit.SECONDS.sleep(60);
+
+        System.out.println("1");
+        System.out.println("2");
+        System.out.println("3");
+        System.out.println("4");
+        System.out.println("5");
+        System.out.println("6");
+        System.out.println("7");
+        System.out.println("8");
+        System.out.println("9");
+        System.out.println("10");
+
+        return "noetic";
 
     }
 
